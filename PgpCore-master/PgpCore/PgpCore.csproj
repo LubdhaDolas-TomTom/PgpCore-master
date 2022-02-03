@@ -1,0 +1,42 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Description>.NET Standard class library for using PGP</Description>
+    <Authors>mattosaurus</Authors>
+    <Company />
+    <Product>PgpCore</Product>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackageProjectUrl>https://github.com/mattosaurus/PgpCore</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/mattosaurus/PgpCore</RepositoryUrl>
+    <PackageTags>PGP .NET Core</PackageTags>
+    <Version>5.5.1</Version>
+    <AssemblyVersion>5.0.0.0</AssemblyVersion>
+    <FileVersion>5.5.1.0</FileVersion>
+    <PackageReleaseNotes>v5.5.1 - Add stream checks</PackageReleaseNotes>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>PgpCoreKey.pfx</AssemblyOriginatorKeyFile>
+    <DelaySign>false</DelaySign>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <PackageReference Include="Portable.BouncyCastle" Version="1.8.9" />
+  </ItemGroup>
+
+</Project>
